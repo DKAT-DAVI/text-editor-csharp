@@ -9,3 +9,14 @@ G:\WINDOWS\Repositorys\dkat\text-editor\text-editor\obj\Debug\text-editor.csproj
 G:\WINDOWS\Repositorys\dkat\text-editor\text-editor\obj\Debug\text-editor.csproj.CoreCompileInputs.cache
 G:\WINDOWS\Repositorys\dkat\text-editor\text-editor\obj\Debug\text-editor.exe
 G:\WINDOWS\Repositorys\dkat\text-editor\text-editor\obj\Debug\text-editor.pdb
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\bin\Debug\text-editor.exe.config
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\bin\Debug\text-editor.exe
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\bin\Debug\text-editor.pdb
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text-editor.csproj.AssemblyReference.cache
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text-editor.csproj.SuggestedBindingRedirects.cache
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text_editor.Form1.resources
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text_editor.Properties.Resources.resources
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text-editor.csproj.GenerateResource.cache
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text-editor.csproj.CoreCompileInputs.cache
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text-editor.exe
+G:\WINDOWS\Repositorys\dkat\text-editor-csharp\text-editor\obj\Debug\text-editor.pdb
