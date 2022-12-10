@@ -95,28 +95,28 @@ namespace text_editor
         //-- tmnuAlignLeft
         private void tmnuAlignLeft_Click(object sender, EventArgs e)
         {
-
+            AlignLeft();
         }
         //--//
 
         //-- tmnuAlignCenter
         private void tmnuAlignCenter_Click(object sender, EventArgs e)
         {
-
+            AlignCenter();
         }
         //--//
 
         //-- tmnuAlignRight
         private void tmnuAlignRight_Click(object sender, EventArgs e)
         {
-
+            AlignRight();
         }
         //--//
 
         //-- tmnuAlignJustify
         private void tmnuAlignJustify_Click(object sender, EventArgs e)
         {
-
+            AlignJustify();
         }
         //
         //--//
@@ -125,6 +125,7 @@ namespace text_editor
         private void tmnuBold_Click(object sender, EventArgs e)
         {
             Bold();
+            ChangeCollorsFormatButtons(this.btnBold);
         }
         //--//
 
@@ -132,6 +133,7 @@ namespace text_editor
         private void tmnuItalic_Click(object sender, EventArgs e)
         {
             Italic();
+            ChangeCollorsFormatButtons(this.btnItalic);
         }
         //--//
 
@@ -139,6 +141,7 @@ namespace text_editor
         private void tmnuUnderline_Click(object sender, EventArgs e)
         {
             Underline();
+            ChangeCollorsFormatButtons(this.btnUnderline);
         }
         //--//
         //
@@ -192,6 +195,7 @@ namespace text_editor
         private void btnBold_Click(object sender, EventArgs e)
         {
             Bold();
+            ChangeCollorsFormatButtons(this.btnBold);
         }
         //--//
 
@@ -199,6 +203,7 @@ namespace text_editor
         private void btnItalic_Click(object sender, EventArgs e)
         {
             Italic();
+            ChangeCollorsFormatButtons(this.btnItalic);
         }
         //--//
 
@@ -206,34 +211,35 @@ namespace text_editor
         private void btnUnderline_Click(object sender, EventArgs e)
         {
             Underline();
+            ChangeCollorsFormatButtons(this.btnUnderline);
         }
         //--//
 
         //-- btnAlignLeft
         private void btnLeft_Click(object sender, EventArgs e)
         {
-
+            AlignLeft();
         }
         //--//
 
         //-- btnAlignCenter
         private void btnCenter_Click(object sender, EventArgs e)
         {
-
+            AlignCenter();
         }
         //--//
 
         //-- btnAlignRight
         private void btnRight_Click(object sender, EventArgs e)
         {
-
+            AlignRight();
         }
         //--//
 
         //-- btnJustify
         private void bntJustify_Click(object sender, EventArgs e)
         {
-
+            AlignJustify();
         }
         //
         //--//
@@ -328,48 +334,192 @@ namespace text_editor
             String fontName = rtxbFile.Font.Name;
             float fontSize = rtxbFile.Font.Size;
             bool bold = rtxbFile.SelectionFont.Bold;
+            bool underline = rtxbFile.SelectionFont.Underline;
+            bool italic = rtxbFile.SelectionFont.Italic;
 
             if (bold == false)
             {
-                rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Bold);
-                bold = true;
+                if (italic == true & underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+                    bold = true;
+                }
+                else if (italic == true & underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Bold | FontStyle.Italic);
+                    bold = true;
+                }
+                else if (italic == false & underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Bold | FontStyle.Underline);
+                    bold = true;
+                }
+                else if (italic == false & underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Bold);
+                    bold = true;
+                }
             }
             else
             {
-                rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular);
+                if (italic == true && underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Italic | FontStyle.Underline);
+                    bold = false;
+                }
+                else if (italic == true && underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Italic);
+                    bold = false;
+                }
+                else if (italic == false && underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Underline);
+                    bold = false;
+                }
+                else if (italic == false && underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular);
+                    bold = false;
+                }
             }
         }
         private void Italic()
         {
             String fontName = rtxbFile.Font.Name;
             float fontSize = rtxbFile.Font.Size;
+            bool bold = rtxbFile.SelectionFont.Bold;
+            bool underline = rtxbFile.SelectionFont.Underline;
             bool italic = rtxbFile.SelectionFont.Italic;
 
             if (italic == false)
             {
-                rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Italic);
-                italic = true;
+                if (bold == true & underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Italic | FontStyle.Bold | FontStyle.Underline);
+                    italic = true;
+                }
+                else if (bold == true & underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Italic | FontStyle.Bold);
+                    italic = true;
+                }
+                else if (bold == false & underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Italic | FontStyle.Underline);
+                    italic = true;
+                }
+                else if (bold == false & underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Italic);
+                    italic = true;
+                }
             }
             else
             {
-                rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular);
+                if (bold == true && underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Bold | FontStyle.Underline);
+                    italic = false;
+                }
+                else if (bold == true && underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Bold);
+                    italic = false;
+                }
+                else if (bold == false && underline == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Underline);
+                    italic = false;
+                }
+                else if (bold == false && underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular);
+                    italic = false;
+                }
             }
         }
         private void Underline()
         {
             String fontName = rtxbFile.Font.Name;
             float fontSize = rtxbFile.Font.Size;
+            bool bold = rtxbFile.SelectionFont.Bold;
             bool underline = rtxbFile.SelectionFont.Underline;
+            bool italic = rtxbFile.SelectionFont.Italic;
 
             if (underline == false)
             {
-                rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Underline);
-                underline = true;
+                if (bold == true & italic == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Underline | FontStyle.Bold | FontStyle.Italic);
+                    underline = true;
+                }
+                else if (bold == true & underline == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Underline | FontStyle.Bold);
+                    underline = true;
+                }
+                else if (bold == false & italic == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Underline | FontStyle.Italic);
+                    underline = true;
+                }
+                else if (bold == false & italic == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Underline);
+                    underline = true;
+                }
             }
             else
             {
-                rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular);
+                if (bold == true && italic == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Bold | FontStyle.Italic);
+                    underline = false;
+                }
+                else if (bold == true && italic == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Bold);
+                    underline = false;
+                }
+                else if (bold == false && italic == true)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular | FontStyle.Italic);
+                    underline = false;
+                }
+                else if (bold == false && italic == false)
+                {
+                    rtxbFile.SelectionFont = new Font(fontName, fontSize, FontStyle.Regular);
+                    underline = false;
+                }
             }
+        }
+        private void ChangeCollorsFormatButtons(ToolStripButton tsbutton)
+        {
+            if(tsbutton.BackColor == System.Drawing.SystemColors.AppWorkspace)
+            {
+                tsbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            }
+            else
+            {
+                tsbutton.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            }  
+        }
+        private void AlignLeft()
+        {
+            rtxbFile.SelectionAlignment = HorizontalAlignment.Left;
+        }
+        private void AlignCenter()
+        {
+            rtxbFile.SelectionAlignment = HorizontalAlignment.Center;
+        }
+        private void AlignRight()
+        {
+            rtxbFile.SelectionAlignment = HorizontalAlignment.Right;
+        }
+        private void AlignJustify()
+        {
+            ///In development
         }
         //--//
     }  

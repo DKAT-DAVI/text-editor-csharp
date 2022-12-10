@@ -68,7 +68,7 @@
             this.btnCenter = new System.Windows.Forms.ToolStripButton();
             this.btnRight = new System.Windows.Forms.ToolStripButton();
             this.bntJustify = new System.Windows.Forms.ToolStripButton();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.fontDialog = new System.Windows.Forms.FontDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
@@ -118,40 +118,45 @@
             // tmnuNew
             // 
             this.tmnuNew.Name = "tmnuNew";
-            this.tmnuNew.Size = new System.Drawing.Size(180, 22);
+            this.tmnuNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.tmnuNew.Size = new System.Drawing.Size(146, 22);
             this.tmnuNew.Text = "New";
             this.tmnuNew.Click += new System.EventHandler(this.tmnuNew_Click);
             // 
             // tmnuOpen
             // 
             this.tmnuOpen.Name = "tmnuOpen";
-            this.tmnuOpen.Size = new System.Drawing.Size(180, 22);
+            this.tmnuOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.tmnuOpen.Size = new System.Drawing.Size(146, 22);
             this.tmnuOpen.Text = "Open";
             this.tmnuOpen.Click += new System.EventHandler(this.tmnuOpen_Click);
             // 
             // tmnuSave
             // 
             this.tmnuSave.Name = "tmnuSave";
-            this.tmnuSave.Size = new System.Drawing.Size(180, 22);
+            this.tmnuSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.tmnuSave.Size = new System.Drawing.Size(146, 22);
             this.tmnuSave.Text = "Save";
             this.tmnuSave.Click += new System.EventHandler(this.tmnuSave_Click);
             // 
             // tmnuPrint
             // 
             this.tmnuPrint.Name = "tmnuPrint";
-            this.tmnuPrint.Size = new System.Drawing.Size(180, 22);
+            this.tmnuPrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.tmnuPrint.Size = new System.Drawing.Size(146, 22);
             this.tmnuPrint.Text = "Print";
             this.tmnuPrint.Click += new System.EventHandler(this.tmnuPrint_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(143, 6);
             // 
             // tmnuExit
             // 
             this.tmnuExit.Name = "tmnuExit";
-            this.tmnuExit.Size = new System.Drawing.Size(180, 22);
+            this.tmnuExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.tmnuExit.Size = new System.Drawing.Size(146, 22);
             this.tmnuExit.Text = "Exit";
             this.tmnuExit.Click += new System.EventHandler(this.tmnuExit_Click);
             // 
@@ -169,28 +174,28 @@
             // tmnuCopy
             // 
             this.tmnuCopy.Name = "tmnuCopy";
-            this.tmnuCopy.Size = new System.Drawing.Size(180, 22);
+            this.tmnuCopy.Size = new System.Drawing.Size(103, 22);
             this.tmnuCopy.Text = "Copy";
             this.tmnuCopy.Click += new System.EventHandler(this.tmnuCopy_Click);
             // 
             // tmnuPaste
             // 
             this.tmnuPaste.Name = "tmnuPaste";
-            this.tmnuPaste.Size = new System.Drawing.Size(180, 22);
+            this.tmnuPaste.Size = new System.Drawing.Size(103, 22);
             this.tmnuPaste.Text = "Paste";
             this.tmnuPaste.Click += new System.EventHandler(this.tmnuPaste_Click);
             // 
             // tmnuUndo
             // 
             this.tmnuUndo.Name = "tmnuUndo";
-            this.tmnuUndo.Size = new System.Drawing.Size(180, 22);
+            this.tmnuUndo.Size = new System.Drawing.Size(103, 22);
             this.tmnuUndo.Text = "Undo";
             this.tmnuUndo.Click += new System.EventHandler(this.tmnuUndo_Click);
             // 
             // tmnuRedo
             // 
             this.tmnuRedo.Name = "tmnuRedo";
-            this.tmnuRedo.Size = new System.Drawing.Size(180, 22);
+            this.tmnuRedo.Size = new System.Drawing.Size(103, 22);
             this.tmnuRedo.Text = "Redo";
             this.tmnuRedo.Click += new System.EventHandler(this.tmnuRedo_Click);
             // 
@@ -213,55 +218,58 @@
             this.tmnuAlignRight,
             this.tmnuAlignJustify});
             this.tmnuAlign.Name = "tmnuAlign";
-            this.tmnuAlign.Size = new System.Drawing.Size(180, 22);
+            this.tmnuAlign.Size = new System.Drawing.Size(167, 22);
             this.tmnuAlign.Text = "Align";
             // 
             // tmnuAlignLeft
             // 
             this.tmnuAlignLeft.Name = "tmnuAlignLeft";
-            this.tmnuAlignLeft.Size = new System.Drawing.Size(180, 22);
+            this.tmnuAlignLeft.Size = new System.Drawing.Size(109, 22);
             this.tmnuAlignLeft.Text = "Left";
             this.tmnuAlignLeft.Click += new System.EventHandler(this.tmnuAlignLeft_Click);
             // 
             // tmnuAlignCenter
             // 
             this.tmnuAlignCenter.Name = "tmnuAlignCenter";
-            this.tmnuAlignCenter.Size = new System.Drawing.Size(180, 22);
+            this.tmnuAlignCenter.Size = new System.Drawing.Size(109, 22);
             this.tmnuAlignCenter.Text = "Center";
             this.tmnuAlignCenter.Click += new System.EventHandler(this.tmnuAlignCenter_Click);
             // 
             // tmnuAlignRight
             // 
             this.tmnuAlignRight.Name = "tmnuAlignRight";
-            this.tmnuAlignRight.Size = new System.Drawing.Size(180, 22);
+            this.tmnuAlignRight.Size = new System.Drawing.Size(109, 22);
             this.tmnuAlignRight.Text = "Right";
             this.tmnuAlignRight.Click += new System.EventHandler(this.tmnuAlignRight_Click);
             // 
             // tmnuAlignJustify
             // 
             this.tmnuAlignJustify.Name = "tmnuAlignJustify";
-            this.tmnuAlignJustify.Size = new System.Drawing.Size(180, 22);
+            this.tmnuAlignJustify.Size = new System.Drawing.Size(109, 22);
             this.tmnuAlignJustify.Text = "Justify";
             this.tmnuAlignJustify.Click += new System.EventHandler(this.tmnuAlignJustify_Click);
             // 
             // tmnuBold
             // 
             this.tmnuBold.Name = "tmnuBold";
-            this.tmnuBold.Size = new System.Drawing.Size(180, 22);
+            this.tmnuBold.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.tmnuBold.Size = new System.Drawing.Size(167, 22);
             this.tmnuBold.Text = "Bold";
             this.tmnuBold.Click += new System.EventHandler(this.tmnuBold_Click);
             // 
             // tmnuItalic
             // 
             this.tmnuItalic.Name = "tmnuItalic";
-            this.tmnuItalic.Size = new System.Drawing.Size(180, 22);
+            this.tmnuItalic.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.tmnuItalic.Size = new System.Drawing.Size(167, 22);
             this.tmnuItalic.Text = "Italic";
             this.tmnuItalic.Click += new System.EventHandler(this.tmnuItalic_Click);
             // 
             // tmnuUnderline
             // 
             this.tmnuUnderline.Name = "tmnuUnderline";
-            this.tmnuUnderline.Size = new System.Drawing.Size(180, 22);
+            this.tmnuUnderline.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.tmnuUnderline.Size = new System.Drawing.Size(167, 22);
             this.tmnuUnderline.Text = "Underline";
             this.tmnuUnderline.Click += new System.EventHandler(this.tmnuUnderline_Click);
             // 
@@ -362,6 +370,7 @@
             // 
             // btnBold
             // 
+            this.btnBold.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnBold.Image = global::text_editor.Properties.Resources.bold;
             this.btnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -437,12 +446,12 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.Filter = "*.dkat|*.dkat|*.txt|*.txt";
+            this.openFileDialog.Filter = "dkat|*.dkat|txt|*.txt|All files|*.*";
             // 
             // saveFileDialog
             // 
             this.saveFileDialog.DefaultExt = "txt";
-            this.saveFileDialog.Filter = "*.dkat|*.dkat|*.txt|*.txt";
+            this.saveFileDialog.Filter = "*.dkat|*.dkat|*.txt|*.txt|All files|*.*";
             // 
             // printDialog1
             // 
@@ -480,7 +489,7 @@
             this.MainMenuStrip = this.mnuMain;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editor";
+            this.Text = "DKAT Editor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
@@ -532,7 +541,7 @@
         private System.Windows.Forms.ToolStripButton btnCenter;
         private System.Windows.Forms.ToolStripButton btnRight;
         private System.Windows.Forms.ToolStripButton bntJustify;
-        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.FontDialog fontDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.PrintDialog printDialog1;
